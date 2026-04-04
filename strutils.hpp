@@ -34,9 +34,13 @@ struct str::utils{
        std::transform(s.begin(), s.end(), s.begin(), ::toupper);
        return *this;
  }
-// 5. The Glue: Joins a list of words with a separator (like a dash)
-    utils& bond(std::vector<std::string>& words, char sperator){
+//str::utils.bond - joins a list of words with a separator (like a dash)
+    utils& bond(std::vector<std::string>& sentence, const char separator){
         std::string s;
+        for(auto& word : sentence){
+            s += word + separator;
+        }
+        return *this;
     }
 // Bonus for v0.2: Replace all instances of a word
 };
