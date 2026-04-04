@@ -14,7 +14,7 @@ namespace str{
 struct str::utils{
 
 // str::util.trim(string) removes spaces from the string
-   utils& trim(std::string& s){
+   utils& despace(std::string& s){
        s.erase(std::remove_if(s.begin(), s.end(), ::isspace), s.end());
        return *this;
    }
