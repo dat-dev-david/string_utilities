@@ -19,7 +19,7 @@ struct str::utils{
    utils& despace(std::string& s){
 
        /*erase the spaces from the string using ::isspace as a sub for: *
-       * (' ' || '\n' || '\t' || '\r' || '\v' || '\f')                  */
+        * (' ' || '\n' || '\t' || '\r' || '\v' || '\f')                  */
        s.erase(std::remove_if(s.begin(), s.end(), ::isspace), s.end());
        return *this;
 
