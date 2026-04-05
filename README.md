@@ -15,3 +15,5 @@ FUNCTIONS:
 •str::utils.bond(vector, char) - joins a list of words with a separator character (like a dash)
 
 •str::utils.replace(string, temporary, replacement) - replaces all instances of a word with another word
+
+•str::utils.split(string, vector) - breaks a string into a string vector 
