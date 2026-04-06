@@ -1,19 +1,25 @@
 # string_utilities
 Utilities for your c++ strings:
 
-V0.1 FEATURES
-==========================================================================================================================================================================================================================================================================================
+V1.0 
+===========================================================================================================================================
 "only supports vector containers -       
 (I'll try to add more container support)"
 
 FUNCTIONS:
+----------
+add this to your code
 
-•despace(string) - removes whitespace from your string.
+`str::utils utils;`
 
-•str::utils.uppercase(string) - converts text to UPPERCASE using ::toupper
+**then**:
 
-•str::utils.bond(vector, char) - joins a list of words with a separator character (like a dash)
+•utilsdespace(string) - removes whitespace from your string.
 
-•str::utils.replace(string, temporary, replacement) - replaces all instances of a word with another word
+•utils.uppercase(string) - converts text to UPPERCASE using ::toupper
 
-•str::utils.split(string, vector) - breaks a string into a string vector 
+•utils.bond(vector, char) - joins a list of words with a separator character (like a dash)
+
+•utils.replace(string, temporary, replacement) - replaces all instances of a word with another word
+
+•utils.split(string, vector) - breaks a string into a string vector 
