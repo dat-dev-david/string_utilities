@@ -9,6 +9,8 @@
 #include <string_view>
 
 namespace str{
+
+//i really don't know why i added this space :/
     struct utils;
 
 }
