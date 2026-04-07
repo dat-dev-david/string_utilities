@@ -1,5 +1,4 @@
-# string_utilities
-Utilities for your c++ strings:
+# string_utilities  -  uilities for your c++ strings:
 
 V0.1 Constraints
 ===========================================================================================================================================
