@@ -6,14 +6,10 @@
 #include <vector>
 #include <algorithm>
 #include <cctype>
-#include <string_view>
 
-namespace str{
-    struct utils;
+namespace str {
 
-}
-
-struct str::utils{
+  struct utils{
 
 // str::utils.despace(string) - removes spaces from the string
    utils& despace(std::string& s){
@@ -26,7 +22,7 @@ struct str::utils{
    }
 
 // str::utils.split(string, vector) - breaks a string into a string vector 
-   utils& split(std::string_view s, std::vector<std::string>& container){
+   utils& split(std::string& s, std::vector<std::string>& container){
 
        //"string_whitespace" is for where 
        size_t whitespace_pos{s.find(' ' || '\n' || '\t' || '\r' || '\v' || '\f')};
@@ -60,7 +56,7 @@ struct str::utils{
  }
 
 //str::utils.bond - joins a list of words with a separator (like a dash)
-    utils& bond(std::vector<std::string_view>& sentence, const char separator){
+    utils& bond(std::vector<std::string>& sentence, const char& separator){
 
         //make a string to store the otuput of the function
         std::string s;
@@ -89,7 +85,10 @@ struct str::utils{
             new_pos = s.find(temporary, pos);
 
         }
+        return *this;
 
     }
 
-};
+  };
+
+}
