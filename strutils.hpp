@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cctype>
 
-namespace str {
+namespace str{
 
   struct utils{
 
@@ -89,6 +89,4 @@ namespace str {
 
     }
 
-  };
-
-}
+};
