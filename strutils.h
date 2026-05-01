@@ -1,6 +1,7 @@
 #ifndef STR_UTILS
 #define STR_UTILS
-#endif
+
+//why is there a space? beacuse i have free will :>
 
 #include <string>
 #include <vector>
@@ -9,20 +10,24 @@
 
 namespace str{
 
-  struct utils{
+  struct utils;
+
+}
+
+typedef struct str::utils{
 
 // str::utils.despace(string) - removes spaces from the string
-   utils& despace(std::string& s){
+   std::string despace(std::string& s){
 
        /*erase the spaces from the string using ::isspace as a sub for: *
         * (' ' || '\n' || '\t' || '\r' || '\v' || '\f')                 */
        s.erase(std::remove_if(s.begin(), s.end(), ::isspace), s.end());
-       return *this;
+       return s;
 
    }
 
 // str::utils.split(string, vector) - breaks a string into a string vector 
-   utils& split(std::string& s, std::vector<std::string>& container){
+   std::vector<std::string> split(std::string& s, std::vector<std::string>& container){
 
        //"string_whitespace" is for where 
        size_t whitespace_pos{s.find(' ' || '\n' || '\t' || '\r' || '\v' || '\f')};
@@ -42,21 +47,21 @@ namespace str{
           updated_whitespacepos = s.find(' ', whitespace_pos + 1);
 
        }
-       return *this;
+       return container;
 
    }
 
 //str::utils.uppercase(string) - converts text to UPPERCASE using ::toupper
-    utils& uppercase(std::string& s){
+    std::string uppercase(std::string& s){
 
        //transform the range of the start and end of the string to uppercase
        std::transform(s.begin(), s.end(), s.begin(), ::toupper);
-       return *this;
+       return s;
 
  }
 
 //str::utils.bond - joins a list of words with a separator (like a dash)
-    utils& bond(std::vector<std::string>& sentence, const char& separator){
+    std::string bond(std::vector<std::string>& sentence, const char& separator){
 
         //make a string to store the otuput of the function
         std::string s;
@@ -65,12 +70,12 @@ namespace str{
         for(auto& word : sentence){
             s += std::string(word) + separator;
         }
-        return *this;
+        return s;
 
     }
 
 // str::utils.replace(string, temporary, replacement) - replaces all instances of a word with another word
-    utils& replace(std::string& s, std::string_view temporary, std::string_view replacement){
+    std::string replace(std::string& s, std::string_view temporary, std::string_view replacement){
 
         //position of the replaceable word
         size_t pos{0};
@@ -85,8 +90,10 @@ namespace str{
             new_pos = s.find(temporary, pos);
 
         }
-        return *this;
+        return s;
 
     }
 
-};
+}utils;
+
+#endif

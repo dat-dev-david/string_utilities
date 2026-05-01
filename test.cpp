@@ -1,10 +1,10 @@
 #include <iostream>
-#include "strutils.hpp"
+#include "strutils.h"
 
 int main(){
+   str::utils utils;
    std::string s{"h g h u i ytr"};
-   std::vector<std::string> v;
-   str::utils.despace(s);
-   std::cout << s;
+   std::string s2 = utils.despace(s);
+   std::cout << s2;
    return 0;
 }
