@@ -30,4 +30,4 @@ V0.2 - Future insights
 
 -add `size_t` ranges for more fuctionality
 
--and have fun  [yeah thats not happening bromacho :/]
+-and have fun  [ yeah thats not happening bromacho :/ ]
